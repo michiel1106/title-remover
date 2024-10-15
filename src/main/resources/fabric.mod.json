@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "titleremover",
+	"version": "${version}",
+	"name": "TitleRemover",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/titleremover/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"bikerboys.titleremover.TitleRemover"
+		],
+		"client": [
+			"bikerboys.titleremover.TitleRemoverClient"
+		]
+	},
+	"mixins": [
+		"titleremover.mixins.json",
+		{
+			"config": "titleremover.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.7",
+		"minecraft": ["1.21.1", "1.21", "1.20.6", "1.20.5"],
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
